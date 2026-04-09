@@ -1,3 +1,3 @@
 <template>
-  <h1 class="text-4xl">Welcome to the Nuxt App</h1>
+  <h1>Welcome to the TG Marketplace</h1>
 </template>
