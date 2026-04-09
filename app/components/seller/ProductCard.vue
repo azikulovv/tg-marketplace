@@ -22,7 +22,9 @@ const buyProduct = (title: string) => {
 
 <template>
   <div class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-    <img :src="product.image" :alt="product.title" class="h-44 w-full object-cover" />
+    <div class="aspect-video w-full overflow-hidden">
+      <img :src="product.image" :alt="product.title" class="h-full w-full object-cover" />
+    </div>
 
     <div class="p-4">
       <div class="mb-2 flex items-start justify-between gap-3">

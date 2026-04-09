@@ -25,7 +25,7 @@ defineProps<{
             </p>
           </div>
 
-          <div class="rounded-full bg-emerald-500/15 px-2 py-1 text-xs text-emerald-300">
+          <div class="rounded-full shrink-0 bg-emerald-500/15 px-2 py-1 text-xs text-emerald-300">
             ★ {{ seller.rating }}
           </div>
         </div>
