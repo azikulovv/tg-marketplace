@@ -7,6 +7,15 @@ export interface Product {
   image: string
   category: Category
   description: string
+  rating: number
+  reviewCount: number
+}
+
+export interface SellerSocials {
+  telegram: string
+  instagram: string
+  whatsapp: string
+  website: string
 }
 
 export interface Seller {
@@ -19,5 +28,6 @@ export interface Seller {
   categories: Category[]
   description: string
   products: Product[]
+  socials: SellerSocials
   featured?: boolean
 }

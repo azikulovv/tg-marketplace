@@ -7,10 +7,9 @@ const { topSellers, recommendedProducts } = useMarketplace()
 </script>
 
 <template>
-  <main class="mx-auto min-h-screen max-w-md bg-neutral-950 px-4 pb-24 pt-6 text-white">
+  <main class="mx-auto min-h-screen max-w-md bg-neutral-950 px-4 pb-24 pt-24 text-white">
     <section class="mb-8">
       <div class="mb-4">
-        <p class="text-sm text-neutral-500">Telegram Marketplace</p>
         <h1 class="mt-1 text-2xl font-semibold">Главная</h1>
       </div>
 

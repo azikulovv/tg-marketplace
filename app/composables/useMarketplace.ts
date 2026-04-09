@@ -13,11 +13,19 @@ export const useMarketplace = () => {
       categories: ['Электроника', 'Аксессуары'],
       description: 'Гаджеты, аксессуары и полезная электроника для повседневной жизни.',
       featured: true,
+      socials: {
+        telegram: 'https://t.me/techstore',
+        instagram: 'https://instagram.com/techstore',
+        whatsapp: 'https://wa.me/77000000001',
+        website: 'https://techstore.example.com',
+      },
       products: [
         {
           id: 101,
           title: 'Беспроводные наушники',
           price: 18990,
+          rating: 4.8,
+          reviewCount: 124,
           image:
             'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
           category: 'Электроника',
@@ -27,6 +35,8 @@ export const useMarketplace = () => {
           id: 102,
           title: 'Смарт-часы',
           price: 24990,
+          rating: 4.7,
+          reviewCount: 89,
           image:
             'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
           category: 'Электроника',
@@ -45,11 +55,19 @@ export const useMarketplace = () => {
       categories: ['Одежда', 'Аксессуары'],
       description: 'Современная одежда и аксессуары в городском стиле.',
       featured: true,
+      socials: {
+        telegram: 'https://t.me/urbanwear',
+        instagram: 'https://instagram.com/urbanwear',
+        whatsapp: 'https://wa.me/77000000002',
+        website: 'https://urbanwear.example.com',
+      },
       products: [
         {
           id: 201,
           title: 'Худи Oversize',
           price: 15990,
+          rating: 4.9,
+          reviewCount: 73,
           image:
             'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80',
           category: 'Одежда',
@@ -59,6 +77,8 @@ export const useMarketplace = () => {
           id: 202,
           title: 'Кепка Minimal',
           price: 6990,
+          rating: 4.6,
+          reviewCount: 41,
           image:
             'https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=80',
           category: 'Аксессуары',
@@ -77,11 +97,19 @@ export const useMarketplace = () => {
       categories: ['Дом'],
       description: 'Товары для уюта, декора и организации пространства.',
       featured: true,
+      socials: {
+        telegram: 'https://t.me/homespace',
+        instagram: 'https://instagram.com/homespace',
+        whatsapp: 'https://wa.me/77000000003',
+        website: 'https://homespace.example.com',
+      },
       products: [
         {
           id: 301,
           title: 'Арома-диффузор',
           price: 12990,
+          rating: 4.8,
+          reviewCount: 67,
           image:
             'https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=800&q=80',
           category: 'Дом',
@@ -91,6 +119,8 @@ export const useMarketplace = () => {
           id: 302,
           title: 'Настольная лампа',
           price: 17990,
+          rating: 4.7,
+          reviewCount: 58,
           image:
             'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80',
           category: 'Дом',
@@ -108,11 +138,19 @@ export const useMarketplace = () => {
       sales: 720,
       categories: ['Красота'],
       description: 'Уходовая косметика и beauty-продукты.',
+      socials: {
+        telegram: 'https://t.me/beautypoint',
+        instagram: 'https://instagram.com/beautypoint',
+        whatsapp: 'https://wa.me/77000000004',
+        website: 'https://beautypoint.example.com',
+      },
       products: [
         {
           id: 401,
           title: 'Набор для ухода за кожей',
           price: 14990,
+          rating: 4.9,
+          reviewCount: 112,
           image:
             'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80',
           category: 'Красота',
@@ -130,11 +168,19 @@ export const useMarketplace = () => {
       sales: 540,
       categories: ['Спорт'],
       description: 'Инвентарь и аксессуары для тренировок.',
+      socials: {
+        telegram: 'https://t.me/sportlab',
+        instagram: 'https://instagram.com/sportlab',
+        whatsapp: 'https://wa.me/77000000005',
+        website: 'https://sportlab.example.com',
+      },
       products: [
         {
           id: 501,
           title: 'Фитнес-коврик',
           price: 9990,
+          rating: 4.8,
+          reviewCount: 94,
           image:
             'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80',
           category: 'Спорт',
@@ -167,6 +213,8 @@ export const useMarketplace = () => {
   })
 
   const getSellerBySlug = (slug: string) => sellers.value.find((seller) => seller.slug === slug)
+  const getProductById = (id: number) =>
+    recommendedProducts.value.find((product) => product.id === id)
 
   return {
     sellers,
@@ -174,5 +222,6 @@ export const useMarketplace = () => {
     recommendedProducts,
     categories,
     getSellerBySlug,
+    getProductById,
   }
 }
